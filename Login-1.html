@@ -15,11 +15,12 @@
     }
 
     .container {
-      width: 300px;
+      width: 350px;
       background-color: #fff;
       border-radius: 5px;
-      padding: 20px;
+      padding: 60px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center; /* Adicionado para centralizar o conteúdo */
     }
 
     h1 {
@@ -37,7 +38,7 @@
     }
 
     button {
-      width: 100%;
+      width: 50%;
       padding: 10px;
       background-color: #4caf50;
       border: none;
@@ -45,6 +46,16 @@
       font-weight: bold;
       cursor: pointer;
       border-radius: 4px;
+    }
+
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .forgot-password a {
+      color: #999;
+      text-decoration: none;
     }
 
     .error-message {
@@ -60,6 +71,9 @@
     <input type="password" id="password" placeholder="Senha">
     <button onclick="login()">Entrar</button>
     <p class="error-message" id="error-message" style="display: none;"></p>
+    <div class="forgot-password">
+      <a href="#">Esqueceu a senha?</a>
+    </div>
   </div>
 
   <script>
