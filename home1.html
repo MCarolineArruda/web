@@ -12,97 +12,95 @@
       padding: 0;
       display: flex;
       flex-direction: column;
+      
     }
 
-    .header {
-      background-color: #333;
-      color: #ffffff;
-      padding: 10px;
-      text-align: left;
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin: 0 60px;
+    color: #050505;
+    padding: 20px;
+    text-align: left;
+    font-size: 24px;
     }
 
-    .nav {
+    nav {
       background-color: #f2f2f2;
       padding: 40px;
       display: flex;
       font-size: 24px;
       flex-direction: row;
-      justify-content: space-between;
-      margin: 0 80px;
+      justify-content: space-between;      
       color: #050505;
       text-decoration: none;
       align-items: center;
     }
 
-    .nav a {
+    nav a {
       margin: 0 20px;
       color: #050505;
-      text-decoration: none;
+
     }
 
 
-    .content {
-      padding: 50px;
-      font-size: 40px;
+    main {
+      padding: 40px;
       text-align: left;
-      margin: 0 80px;
+      margin: 0 50px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: left;
+      font-size: 30px;
     }
 
-    .content span {
+    main span {
       color: #fd00be;
       text-decoration: none;
     }
-    /* Estilos para a imagem redonda */
+
     .centered-image img {
       border-radius: 50%;
-    } 
+    }
 
-    .footer {
+    footer {
       background-color: #faf4f4;
-      color: #fff;
-      padding: 50px;
+      color: #050505;
+      padding: 10px;
       text-align: center;
       font-size: 15px;
+      margin: 0 50px;
+     
     }
 
-    .footer a {
+    footer a {
       color: #fff;
       text-decoration: none;
     }
-     /* Estilos para copyright */
-    .footer span {
-      color: #050505;
-      text-decoration: none;
-      font-size: 15px;       
-    }
-    
-    /* Estilos para o botão de contato */
+
     .contact-button {
       font-family: Times New Roman, sans-serif;
       color: #fff;
-      background-color: #3503bd;    
+      background-color: #3503bd;
       border: none;
       padding: 10px 50px;
       border-radius: 20px;
       cursor: pointer;
       text-decoration: none;
     }
-    
-    /* Estilos para os ícones de redes sociais */
+
     .social-icons {
       text-align: left;
-
     }
 
-    /* Estilos para os ícones de redes sociais */
     .social-icons a {
       color: #0f0e0e;
       text-decoration: none;
       font-size: 20px;
-      margin: 0 80px;
+      margin: 0 50px;
       margin-right: 0px;
     }
 
@@ -113,39 +111,40 @@
 </head>
 
 <body>
-  <div class="nav">
-
+  <header>
     <div class="username-left">
       <p>Name</p>
     </div>
     <div>
-      <a href="home1.html">Home</a>
-      <a href="About1.html">About</a>
+      <nav>
+        <a href="home1.html">Home</a> 
+        <a href="About1.html">About</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="content">
+  <main>
     <div>
       <h2>Hi,
         <p>We are <span> Caroline, Pedro and Thiago</span> </p>
         <p>Junior Developers</p>
       </h2>
-      <a href="https://www.linkedin.com/" target="_blank" class="contact-button">Contato</a>
+      <a href="https://www.linkedin.com/in/mcarolinearruda" target="_blank" class="contact-button">Contato</a>
     </div>
     <div class="centered-image">
       <img src="devs1jpg.jpg" width="700" height="600" alt="Descrição da imagem">
     </div>
-  </div>
+  </main>
 
 
-  <div class="footer">
+  <footer>
     <p class="social-icons">
-      <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-      <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
-      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/MCarolineArruda" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/mcarolinearruda" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+      
     </p>
-    <p><span id="copyright">© All rights reserved to: Name </span></p>
-   </div>
+    <p><span id="copywriting">© All rights reserved to: Caroline, Pedro and Thiago </span></p>
+  </footer>
 
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
 </body>

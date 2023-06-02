@@ -4,7 +4,7 @@
   <title>Tela de Login</title>
   <style>
     body {
-      font-family: Calibri, sans-serif;
+      font-family: Times New Roman, sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -21,6 +21,10 @@
       padding: 60px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center; /* Adicionado para centralizar o conteúdo */
+    }
+    .container header{
+      color: #000000
+     
     }
 
     h1 {
@@ -40,7 +44,7 @@
     button {
       width: 50%;
       padding: 10px;
-      background-color: #4caf50;
+      background-color: #3b19d3;
       border: none;
       color: white;
       font-weight: bold;
@@ -65,17 +69,28 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Login</h1>
-    <input type="text" id="username" placeholder="Usuário">
-    <input type="password" id="password" placeholder="Senha">
-    <button onclick="login()">Entrar</button>
-    <p class="error-message" id="error-message" style="display: none;"></p>
-    <div class="forgot-password">
-      <a href="#">Esqueceu a senha?</a>
+  <main>
+    <div class="container">
+      <header>
+        <h1>Login</h1>
+      </header>
+      <form onsubmit="event.preventDefault(); login();">
+        <div>
+          <label for="username">Usuário:</label>
+          <input type="text" id="username" name="username" placeholder="Usuário" required>
+        </div>
+        <div>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" placeholder="Senha" required>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="error-message" id="error-message" style="display: none;"></p>
+      <div class="forgot-password">
+        <a href="#">Esqueceu a senha?</a>
+      </div>
     </div>
-  </div>
-
+  </main>
   <script>
     function login() {
       var username = document.getElementById("username").value;
@@ -90,6 +105,12 @@
         var errorMessage = document.getElementById("error-message");
         errorMessage.style.display = "block";
         errorMessage.innerHTML = "Usuário ou senha inválidos.";
+      }
+    }
+    function handleEnterKey(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        login();
       }
     }
   </script>
